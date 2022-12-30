@@ -15,6 +15,7 @@ class MeasurementApp{
 
   static widthOf75Percent() => _widthByPercent(0.75);
   static widthOf90Percent() => _widthByPercent(0.90);
+  static widthOf5Percent() => _widthByPercent(0.05);
 
   static heightOf15Percent() => _heightByPercent(0.15);
 

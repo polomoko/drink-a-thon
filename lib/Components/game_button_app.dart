@@ -91,24 +91,40 @@ class GameButtonApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double componentWidth = MeasurementApp.widthOf90Percent(),
+        componentHeight = MeasurementApp.heightOf15Percent(),
+        marginComponent = MeasurementApp.widthOf5Percent();
+
     return Column(children: [
       SizedBox(height: MeasurementApp.height() * 0.05),
       Stack(
         children: [
           Align(
             child: CustomPaint(
-              size: Size(MeasurementApp.widthOf90Percent(),
-                  MeasurementApp.heightOf15Percent()),
+              size: Size(componentWidth, componentHeight),
               painter: GameButtonAppPainter(),
             ),
             alignment: Alignment.center,
           ),
           Align(
             child: Container(
-              child: Text("test"),
-              width: MeasurementApp.heightOf15Percent(),
+              child: Text("Logo"),
+              width: componentHeight,
+              height: componentHeight,
+              margin: EdgeInsets.only(left: marginComponent),
+              alignment: Alignment.center,
             ),
             alignment: Alignment.centerLeft,
+          ),
+          Align(
+            child: Container(
+              child: const TitleTextApp("Yata", ConstApp.black),
+              height: MeasurementApp.heightOf15Percent(),
+              width: componentWidth - componentHeight,
+              margin: EdgeInsets.only(right: marginComponent),
+              alignment: Alignment.center,
+            ),
+            alignment: Alignment.centerRight,
           )
         ],
         // alignment: Alignment.center,
