@@ -1,5 +1,6 @@
+import 'package:drinkathon/Components/game_button_app.dart';
 import 'package:drinkathon/Const/const.dart';
-import 'package:drinkathon/Const/mediaApp.dart';
+import 'package:drinkathon/Const/media_app.dart';
 
 import 'Components/banner_app.dart';
 import 'package:flutter/material.dart';
@@ -241,7 +242,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [ConstApp.gradientStart, ConstApp.gradientEnd])),
-            child: Column(children: const [BannerDAT()]), width: MeasurementApp.width()),
+            child: Column(children: const [BannerApp(), GameButtonApp()]), width: MeasurementApp.width()),
       ),
     );
     // This trailing comma makes auto-formatting nicer for build methods.

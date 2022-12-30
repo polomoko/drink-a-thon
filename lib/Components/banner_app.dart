@@ -1,4 +1,4 @@
-import 'package:drinkathon/Const/mediaApp.dart';
+import 'package:drinkathon/Const/media_app.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../Const/const.dart';
@@ -52,6 +52,7 @@ class BannerPainter extends CustomPainter {
     return p;
   }
 
+  //todo remove never use
   Path bannerGlow(Size size, Canvas canvas) {
     Path p = Path();
     p.moveTo(0 - size.width * 0.10, size.height / 2);
@@ -65,8 +66,8 @@ class BannerPainter extends CustomPainter {
   }
 }
 
-class BannerDAT extends StatelessWidget {
-  const BannerDAT({Key? key}) : super(key: key);
+class BannerApp extends StatelessWidget {
+  const BannerApp({Key? key}) : super(key: key);
   static const double heightBanner = 60;
 
   @override
