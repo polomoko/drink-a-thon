@@ -3,6 +3,7 @@ import 'package:drinkathon/Const/media_app.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../Game/NeverIHaveEver.dart';
 import 'Texts/title_text_app.dart';
 
 class GameButtonAppPainter extends CustomPainter {
@@ -101,37 +102,45 @@ class GameButtonApp extends StatelessWidget {
 
     return Column(children: [
       SizedBox(height: MeasurementApp.height() * 0.05),
-      Stack(
-        children: [
-          Align(
-            child: CustomPaint(
-              size: Size(componentWidth, componentHeight),
-              painter: GameButtonAppPainter(),
-            ),
-            alignment: Alignment.center,
-          ),
-          Align(
-            child: Container(
-              child: icon,
-              width: componentHeight,
-              height: componentHeight,
-              margin: EdgeInsets.only(left: marginComponent),
+      GestureDetector(
+        onTap: (){
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const NeverIHaveEver()),
+          );
+        },
+        child: Stack(
+          children: [
+            Align(
+              child: CustomPaint(
+                size: Size(componentWidth, componentHeight),
+                painter: GameButtonAppPainter(),
+              ),
               alignment: Alignment.center,
             ),
-            alignment: Alignment.centerLeft,
-          ),
-          Align(
-            child: Container(
-              child: TitleTextApp(text, ConstApp.black),
-              height: componentHeight,
-              width: componentWidth - componentHeight,
-              margin: EdgeInsets.only(right: marginComponent),
-              alignment: Alignment.center,
+            Align(
+              child: Container(
+                child: icon,
+                width: componentHeight,
+                height: componentHeight,
+                margin: EdgeInsets.only(left: marginComponent),
+                alignment: Alignment.center,
+              ),
+              alignment: Alignment.centerLeft,
             ),
-            alignment: Alignment.centerRight,
-          )
-        ],
-        // alignment: Alignment.center,
+            Align(
+              child: Container(
+                child: TitleTextApp(text, ConstApp.black),
+                height: componentHeight,
+                width: componentWidth - componentHeight,
+                margin: EdgeInsets.only(right: marginComponent),
+                alignment: Alignment.center,
+              ),
+              alignment: Alignment.centerRight,
+            )
+          ],
+          // alignment: Alignment.center,
+        ),
       )
     ]);
   }
