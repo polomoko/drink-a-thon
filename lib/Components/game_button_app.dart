@@ -86,14 +86,18 @@ class GameButtonAppPainter extends CustomPainter {
 }
 
 class GameButtonApp extends StatelessWidget {
-  const GameButtonApp({Key? key}) : super(key: key);
+
+  GameButtonApp(this.icon, this.text,{Key? key}) : super(key: key);
+
   static double thisTopPadding = 10;
+  late Icon icon;
+  late String text;
 
   @override
   Widget build(BuildContext context) {
-    double componentWidth = MeasurementApp.widthOf90Percent(),
-        componentHeight = MeasurementApp.heightOf15Percent(),
-        marginComponent = MeasurementApp.widthOf5Percent();
+    double componentWidth = MeasurementApp.width()*0.8,
+        componentHeight = MeasurementApp.height()*0.10,
+        marginComponent = MeasurementApp.width()*0.1;
 
     return Column(children: [
       SizedBox(height: MeasurementApp.height() * 0.05),
@@ -108,7 +112,7 @@ class GameButtonApp extends StatelessWidget {
           ),
           Align(
             child: Container(
-              child: Text("Logo"),
+              child: icon,
               width: componentHeight,
               height: componentHeight,
               margin: EdgeInsets.only(left: marginComponent),
@@ -118,8 +122,8 @@ class GameButtonApp extends StatelessWidget {
           ),
           Align(
             child: Container(
-              child: const TitleTextApp("Yata", ConstApp.black),
-              height: MeasurementApp.heightOf15Percent(),
+              child: TitleTextApp(text, ConstApp.black),
+              height: componentHeight,
               width: componentWidth - componentHeight,
               margin: EdgeInsets.only(right: marginComponent),
               alignment: Alignment.center,

@@ -5,7 +5,6 @@ import 'package:drinkathon/Const/media_app.dart';
 import 'Components/banner_app.dart';
 import 'package:flutter/material.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -183,7 +182,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -222,7 +220,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -232,6 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     MeasurementApp.set(context);
+    var iconSize = MeasurementApp.width() / 8;
     return Scaffold(
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
@@ -242,7 +240,42 @@ class _MyHomePageState extends State<MyHomePage> {
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [ConstApp.gradientStart, ConstApp.gradientEnd])),
-            child: Column(children: const [BannerApp(), GameButtonApp()]), width: MeasurementApp.width()),
+            child: Column(children: [
+              BannerApp(),
+              GameButtonApp(
+                  Icon(
+                    Icons.no_adult_content,
+                    color: ConstApp.black,
+                    size: iconSize,
+                  ),
+                  "je n'ai jamais"),
+              GameButtonApp(
+                  Icon(
+                    Icons.warning,
+                    color: ConstApp.black,
+                    size: iconSize,
+                  ),
+                  "Dare"),
+              GameButtonApp(
+                  Icon(Icons.support_agent,
+                      color: ConstApp.black, size: iconSize),
+                  "truth"),
+              GameButtonApp(
+                  Icon(
+                    Icons.image,
+                    color: ConstApp.black,
+                    size: iconSize,
+                  ),
+                  "Meme"),
+              GameButtonApp(
+                  Icon(
+                    Icons.games,
+                    color: ConstApp.black,
+                    size: iconSize,
+                  ),
+                  "Melimelo")
+            ]),
+            width: MeasurementApp.width()),
       ),
     );
     // This trailing comma makes auto-formatting nicer for build methods.
