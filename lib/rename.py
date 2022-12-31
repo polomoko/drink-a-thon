@@ -1,5 +1,5 @@
 import os
-path = '/Users/alexandre/WorkSpace/drink-a-thon/lib/assets/images_meme'
+path = '/Users/alexandre/WorkSpace/drink-a-thon/lib/assets'
 files = os.listdir(path)
 
 
