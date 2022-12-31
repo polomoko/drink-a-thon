@@ -26,6 +26,7 @@ class _IGame extends State<IGame> {
   @override
   Widget build(BuildContext context) {
     var listGame =  List.from(list);
+    var nbTourMax = 30;
     Random random = new Random();
     index = random.nextInt(listGame.length);
     message = listGame[index];
@@ -41,7 +42,7 @@ class _IGame extends State<IGame> {
                 index = random.nextInt(listGame.length);
                 message = listGame[index];
                 listGame.removeAt(index);
-                if(listGame.isEmpty || nbrTour == 11){
+                if(listGame.isEmpty || nbrTour == nbTourMax){
                   EmojiAlert(
                     alertTitle:  Text("Fin de la partie", style:  TextStyle(fontWeight:  FontWeight.bold)),
                     description:  Column(
