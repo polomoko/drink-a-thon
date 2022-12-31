@@ -88,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
               BannerApp(),
               GameButtonApp(
                   Icon(
-                    Icons.abc`,
+                    Icons.abc,
                     color: ConstApp.black,
                     size: iconSize,
                   ),
