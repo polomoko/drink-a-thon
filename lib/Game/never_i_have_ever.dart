@@ -4,7 +4,6 @@ import 'package:drinkathon/Game/interface_game.dart';
 import 'package:flutter/material.dart';
 // Je n'ai jamais
 var list = [
-  "test",
   'Je n’ai jamais fait semblant d’être malade pour ne pas aller à l’école.',
   'Je n’ai jamais intimidé un(e) camarade de classe.',
   'Je n’ai jamais été choisi en dernier(e) pour un projet de groupe.',
@@ -160,8 +159,7 @@ var list = [
   'Je n’ai jamais essayé d’appli de rencontre.',
   'Je n’ai jamais donné de sexy surnom à moi-même.',
   'Je n’ai jamais gouté de la nourriture de bébé quand j’étais déjà grand(e).',
-  'Je ne suis jamais allé(e) à Disneyland.',
-  'three'
+  'Je ne suis jamais allé(e) à Disneyland.'
 ];
 class NeverIHaveEver extends StatelessWidget {
   const NeverIHaveEver({Key? key}) : super(key: key);

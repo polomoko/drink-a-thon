@@ -10,9 +10,9 @@ import '../Components/Texts/game_text_app.dart';
 import '../Const/const.dart';
 
 class IGame extends StatefulWidget {
-  const IGame(this.list, [this.isMeme = false]);
+  IGame(this.list, [this.isMeme = false]);
   final List list;
-  final bool isMeme;
+  bool isMeme;
   @override
   State<IGame> createState() => _IGame(this.list);
 }
@@ -42,6 +42,16 @@ class _IGame extends State<IGame> {
                 Random random = new Random();
                 index = random.nextInt(listGame.length);
                 message = listGame[index];
+                print("===============================");
+                print(message);
+                if(message == ""){
+                  print("oui");
+                  widget.isMeme = true;
+                }
+                else {
+                  widget.isMeme = false;
+                  print("non");
+                }
                 listGame.removeAt(index);
                 if(listGame.isEmpty || nbrTour == nbTourMax){
                   EmojiAlert(

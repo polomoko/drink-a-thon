@@ -4,8 +4,7 @@ import 'package:drinkathon/Game/interface_game.dart';
 import 'package:flutter/material.dart';
 
 // Je n'ai jamais
-var list = [
-  "test",
+var listJeNaiJamais = [
   'Je n’ai jamais fait semblant d’être malade pour ne pas aller à l’école.',
   'Je n’ai jamais intimidé un(e) camarade de classe.',
   'Je n’ai jamais été choisi en dernier(e) pour un projet de groupe.',
@@ -161,14 +160,148 @@ var list = [
   'Je n’ai jamais essayé d’appli de rencontre.',
   'Je n’ai jamais donné de sexy surnom à moi-même.',
   'Je n’ai jamais gouté de la nourriture de bébé quand j’étais déjà grand(e).',
-  'Je ne suis jamais allé(e) à Disneyland.',
-  'three'
+  'Je ne suis jamais allé(e) à Disneyland.'
 ];
+
+var listDare = [
+  'Fais ‘Coucou’ à un inconnu dans la rue.',
+  'Chante comme une chanteuse d’Opéra.',
+  'Cure toi le nez en public.',
+  'Sors et chante la Marseillaise à voix haute.',
+  'Imite ton personnage préféré de Disney.',
+  'Appelle ton béguin pour lui avouer ton amour.',
+  'Embrasse la semelle de la chaussure de ton ami/e.',
+  'Lèche le pneu avant d’un vélo.',
+  'Va en direct sur Facebook et raconte aux gens une blague idiote.',
+  'Mange un morceau de papier.',
+  'Mange une cuillerée d’un cornichon.',
+  'Fais un câlin à un arbre et embrasse ses feuilles.',
+  'Demande une tasse de café à ton voisin.',
+  'Essaie de faire le bruit d’un chien affamé.',
+  'Suce ton pouce pendant quinze minutes.',
+  'Appelle ta mère et raconte-lui à quel point tu adores fumer des cigarettes.',
+  'Laisse les gens te jeter des œufs au visage.',
+  'Appelle ton père et dis-lui que tu as un petit ami/une petite amie.',
+  'Pose comme un mannequin de Victoria Secret.',
+  'Parle à ta main pendant les dix prochaines minutes.',
+  'Fais 20 pompes.',
+  'Renifle les aisselles de la personne assise à votre droite.',
+  'Appelle un numéro au hasard et chante une berceuse à la personne qui répond.',
+  'Mange une cuillère de sucre.',
+  'Joue le reste du jeu en restant debout.',
+  'Porte ton soutif par dessus ton t-shirt pour le reste du jeu.',
+  'Imite ta mère.',
+  'Appelle une personne au hasard et souhaite-lui un “Joyeux anniversaire”.',
+  'Appelle ton coup de cœur et fais-lui une demande en mariage.',
+  'Appelle une pizzeria et commande une pizza pour tout le monde dans la pièce.',
+  'Appelle ton prof et avoue que tu as triché au dernier contrôle de classe.',
+  'Porte tes sous-vêtements sur ta tête pour le reste de la partie.',
+  'Prends un selfie marrante de toi-même et envoie-le à ta maman.',
+  'Fais un câlin chaleureux à la personne assise à ta droite.',
+  'Laisse tout le monde regarder l’historique de tes recherches sur ton portable.',
+  'Appelle ta mère en parlant avec une voix sexy.',
+  'Demande à la personne assise à ta droite de te tirer les joues.',
+  'Échange des sous-vêtements avec la personne assise à côté de toi.',
+  'Passe du fil dentaire entre les dents de la personne assise à ta gauche.',
+  'Commande une bague en ligne et offre-la à ta mère.',
+  'Sonne à la porte de tes voisins et enfuis-toi.',
+  'Fais un Moonwalk.',
+  'Rase-toi les aisselles.',
+  'Mords les ongles de tes pouces avec tes dents.',
+  'Flirte avec un type au hasard dans la rue.',
+  'Fais des bruits de pets marrants.',
+  'Embrasse n’importe quelle personne de ton groupe d’amis.',
+  'Dessine un tatouage sur ta main droite avec un marqueur permanent.',
+  'Prends une douche froide avec tes vêtements et joue le reste du jeu avec des vêtements mouillés.',
+  'Parle avec la voix d’un canard.',
+  'Mets une vidéo porno et regarder la.',
+  'Mange une poignée d’épices piquants.',
+  'Épile le dos de n’importe quelle personne.',
+  'Sens du poivre noir sans éternuer.',
+  'Joue le reste du jeu les yeux fermés.',
+  'Mélange du sucre et du poivre noir et mange ce mélange.',
+  'Frotte du chocolat sur ton nez et essaie de le lécher.',
+  'Publi un statut Facebook en utilisant seulement tes coudes.',
+  'Mets des glaçons dans tes chaussures et porte-les jusqu’à la fin du jeu.',
+  'Lèche ton coude.',
+  'Imite l’animal de compagnie de ta famille.',
+  'Bois dix verres d’eau d’un coup.',
+  'Achète une chemise en ligne et offre le à ton père.'
+];
+
+var listTruth = [
+  'Quel est le plus gros mensonge qu’on t’a dit pendant ton enfance ?',
+  'Qui aimerais-tu épouser ?',
+  'Est-ce que tu as eu un/e ami/e imaginaire pendant ton enfance ?',
+  'Cite trois choses auxquelles tu penses lorsque tu es assis/e aux toilettes.',
+  'Nomme ton/ta petit/e ami/e.',
+  'Quelle est la dernière chose que tu as cherchée sur Google ?',
+  'Est-ce que tu aimes chanter sous la douche ?',
+  'As-tu déjà été amoureux/se ?',
+  'Quelle superpouvoir as-tu déjà souhaité avoir ?',
+  'Est-ce que tu as déjà demandé quelqu’un en mariage ?',
+  'Dis nous ton secret le plus embarrassant.',
+  'Qui est ta/ton meilleur/e ami/e ?',
+  'Cite un/e de tes ami/es à qui tu voudrais offrir un dîner aux chandelles.',
+  'Quel est le plus gros mensonge que tu as dit à quelqu’un ?',
+  'Cite une de tes pires habitudes dont tu veux te débarrasser.',
+  'Nomme la fille ou le garçon le / la plus mignon/ne de ta classe.',
+  'Qui est-ce que tu aimes plus ? Maman ou Papa ?',
+  'T’a-t-on déjà surpris à parler pendant ton sommeil ?',
+  'Qui est la fille ou le garçon de tes rêves ?',
+  'Nomme ta plus grande peur.',
+  'As-tu déjà vu tes parents faire l’amour par accident ?',
+  'Est-ce que tu t’es déjà curé le nez en public ?',
+  'Nomme ton béguin actuel.',
+  'Nomme ton amour d’enfance.',
+  'As-tu déjà eu le béguin pour ton prof ?',
+  'As-tu déjà embrassé ta photo ?',
+  'As-tu déjà été surpris en train de marcher pendant ton sommeil ?',
+  'As-tu déjà eu l’envie de tuer quelqu’un ?',
+  'Nomme un personnage Disney que tu voudrais devenir.',
+  'Mentionne ta taille de soutif.',
+  'As-tu déjà essayé de flirter avec le petit ami/la petite amie de ta meilleure amie ?',
+  'Nomme une célébrité que tu trouves la plus sexy.',
+  'Quel est ton poids ?',
+  'Si tu avais la chance d’épouser une célébrité, qui serait-il ou elle ?',
+  'Décris la farce la plus drôle qu’on t’ait jamais faite.',
+  'Est-ce que tu aimes lécher ton assiette après ton repas ?',
+  'Est-ce que tu as déjà goûté de la nourriture pour chat ou pour chien ?',
+  'Quel était ton surnom pendant ton enfance ?',
+  'Quelle coupe de cheveux est-ce que tu as toujours voulu avoir ?',
+  'Nomme l’animal qui te ressemble le plus.',
+  'Quelle est la position professionnelle dont tu rêves ?',
+  'Quelle est la première chose que tu remarques chez une fille ou un garçon ?',
+  'Qu’est-ce que tu préfères ? Le thé ou le café ?',
+  'Est-ce que tu te trouves sexy ?',
+  'Est-ce que tu as déjà pleuré parce que quelqu’un te manquait ?',
+  'Est-ce que tu as déjà demandé à quelqu’un de sortir dîner avec toi ?',
+  'Quand est-ce que tu as pleuré pour la dernière fois, et pourquoi ?',
+  'Est-ce que tu danses quand tu es seul(e) ?',
+  'Cite une partie de ton corps que tu voudrais échanger avec ton/ta meilleur/e ami/e.',
+  'Cite une chose que tu voudrais changer chez toi.',
+  'Nomme le pire embrasseur présent dans cette pièce.',
+  'De qui es-tu jaloux/se ?',
+  'Mentionne ta tour de taille.',
+  'Est-ce que tu as déjà souhaité changer de sexe ?',
+  'Quel est le métier de tes rêves ?',
+  'Quelle est la connaissance la plus inutile ?',
+  'Nomme une personne dans la pièce dont tu es secrètement amoureux/se.',
+  'Qu’est-ce qui est écrit sur la dernière page de ton journal intime ?',
+  'Décris ta première impression de ton petit ami ou de ta petite amie.',
+  'Est-ce que tu as déjà gardé intentionnellement un livre de bibliothèque ?'
+];
+
 class Melimelo extends StatelessWidget {
   const Melimelo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    listDare.shuffle();
+    listJeNaiJamais.shuffle();
+    listTruth.shuffle();
+    var memes = List<String>.generate(30, (i) => "");
+    var list =  List.from(listDare.take(30)) + List.from(listJeNaiJamais.take(30)) + List.from(listTruth.take(30))  + memes;
     return IGame(list);
   }
 
