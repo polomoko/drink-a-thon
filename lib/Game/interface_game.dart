@@ -10,8 +10,9 @@ import '../Components/Texts/game_text_app.dart';
 import '../Const/const.dart';
 
 class IGame extends StatefulWidget {
-  const IGame(this.list, {Key? key}) : super(key: key);
+  const IGame(this.list, [this.isMeme = false]);
   final List list;
+  final bool isMeme;
   @override
   State<IGame> createState() => _IGame(this.list);
 }
@@ -47,7 +48,7 @@ class _IGame extends State<IGame> {
                     alertTitle:  Text("Fin de la partie", style:  TextStyle(fontWeight:  FontWeight.bold)),
                     description:  Column(
                       children: [
-                        Text("Je ne sais pas quoi ecrire... Felicitations???"),
+                        Text("Je ne sais pas quoi ecrire... Felicitations???", textAlign: TextAlign.center),
                       ],
                     ),
                     enableMainButton:  true,
@@ -81,7 +82,7 @@ class _IGame extends State<IGame> {
                           ConstApp.gradientStart,
                           ConstApp.gradientEnd
                         ])),
-                child: GameTextApp(message),
+                child: !widget.isMeme ? GameTextApp(message) : Image.asset("lib/assets/${index}.jpg"),
               ),
             ),
           ),
