@@ -1,6 +1,11 @@
 import 'package:drinkathon/Components/game_button_app.dart';
 import 'package:drinkathon/Const/const.dart';
 import 'package:drinkathon/Const/media_app.dart';
+import 'package:drinkathon/Game/dare.dart';
+import 'package:drinkathon/Game/melimelo.dart';
+import 'package:drinkathon/Game/meme.dart';
+import 'package:drinkathon/Game/never_i_have_ever.dart';
+import 'package:drinkathon/Game/truth.dart';
 
 import 'Components/banner_app.dart';
 import 'package:flutter/material.dart';
@@ -87,32 +92,37 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: ConstApp.black,
                     size: iconSize,
                   ),
-                  "je n'ai jamais"),
+                  "Never i Have Ever",
+                  NeverIHaveEver()),
               GameButtonApp(
                   Icon(
                     Icons.warning,
                     color: ConstApp.black,
                     size: iconSize,
                   ),
-                  "Dare"),
+                  "Dare",
+                  Dare()),
               GameButtonApp(
                   Icon(Icons.support_agent,
                       color: ConstApp.black, size: iconSize),
-                  "truth"),
+                  "truth",
+                  Truth()),
               GameButtonApp(
                   Icon(
                     Icons.image,
                     color: ConstApp.black,
                     size: iconSize,
                   ),
-                  "Meme"),
+                  "Meme",
+                  Meme()),
               GameButtonApp(
                   Icon(
                     Icons.games,
                     color: ConstApp.black,
                     size: iconSize,
                   ),
-                  "Melimelo")
+                  "Melimelo",
+                  Melimelo())
             ]),
             width: MeasurementApp.width()),
       ),

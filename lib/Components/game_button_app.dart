@@ -3,7 +3,7 @@ import 'package:drinkathon/Const/media_app.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../Game/NeverIHaveEver.dart';
+import '../Game/never_i_have_ever.dart';
 import 'Texts/title_text_app.dart';
 
 class GameButtonAppPainter extends CustomPainter {
@@ -88,11 +88,12 @@ class GameButtonAppPainter extends CustomPainter {
 
 class GameButtonApp extends StatelessWidget {
 
-  GameButtonApp(this.icon, this.text,{Key? key}) : super(key: key);
+  GameButtonApp(this.icon, this.text, this.widget,{Key? key}) : super(key: key);
 
   static double thisTopPadding = 10;
   late Icon icon;
   late String text;
+  late StatelessWidget widget;
 
   @override
   Widget build(BuildContext context) {
@@ -106,7 +107,7 @@ class GameButtonApp extends StatelessWidget {
         onTap: (){
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const NeverIHaveEver()),
+            MaterialPageRoute(builder: (context) => widget),
           );
         },
         child: Stack(
