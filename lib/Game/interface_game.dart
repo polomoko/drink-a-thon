@@ -17,15 +17,32 @@ class IGame extends StatefulWidget {
   State<IGame> createState() => _IGame(this.list);
 }
 
-class _IGame extends State<IGame> {
+class _IGame extends State<IGame> with TickerProviderStateMixin {
   int index = 0;
   String message = "test";
   int nbrTour = 0;
+  late final AnimationController _controller = AnimationController(
+    duration: const Duration(milliseconds: 300),
+    vsync: this,
+  );
+  @override
+  void initState() {
+    super.initState();
+    repeatOnce();
+  }
 
+  void repeatOnce() async {
+    await _controller.forward();
+  }
+  late final Animation<double> _animation = CurvedAnimation(
+    parent: _controller,
+    curve: Curves.easeInOutBack,
+  );
   _IGame(this.list);
   late List list;
   @override
   Widget build(BuildContext context) {
+
     var listGame =  List.from(list);
     var nbTourMax = 30;
     Random random = new Random();
@@ -37,13 +54,15 @@ class _IGame extends State<IGame> {
         children: <Widget>[
           GestureDetector(
             onTap: () {
-              setState(() {
+              setState(()  {
                 nbrTour++;
                 Random random = new Random();
                 index = random.nextInt(listGame.length);
                 message = listGame[index];
                 print("===============================");
                 print(message);
+                _controller.reset();
+                _controller.forward();
                 if(message == ""){
                   print("oui");
                   widget.isMeme = true;
@@ -92,7 +111,13 @@ class _IGame extends State<IGame> {
                           ConstApp.gradientStart,
                           ConstApp.gradientEnd
                         ])),
-                child: !widget.isMeme ? GameTextApp(message) : Image.asset("lib/assets/${index}.jpg"),
+                child: ScaleTransition(
+                  scale: _animation,
+                  child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: !widget.isMeme ? GameTextApp(message) : Image.asset("lib/assets/${index}.jpg"),
+                  ),
+                ),
               ),
             ),
           ),

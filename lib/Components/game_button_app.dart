@@ -98,7 +98,7 @@ class GameButtonApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double componentWidth = MeasurementApp.width()*0.8,
-        componentHeight = MeasurementApp.height()*0.10,
+        componentHeight = MeasurementApp.height()*0.08,
         marginComponent = MeasurementApp.width()*0.1;
 
     return Column(children: [

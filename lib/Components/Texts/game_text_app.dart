@@ -11,7 +11,7 @@ class GameTextApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return Text(text, style: const TextStyle(color: ConstApp.white, fontSize: fontTitle, fontWeight: FontWeight.bold, height: 2), textAlign: TextAlign.center,);
+    return  DefaultTextStyle(style: TextStyle(color: ConstApp.white, fontSize: fontTitle, fontWeight: FontWeight.bold, height: 2, fontFamily: 'Graphik'), child: Text(text), textAlign: TextAlign.center,);
   }
 
 }
